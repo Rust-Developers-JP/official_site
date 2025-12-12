@@ -15,17 +15,13 @@
       content="Discord版Rust-JPの公式サイトです。"
     />
     <title>Rust-JP in Discord</title>
-    <link
-      rel="stylesheet"
-      href="./style.css"
-    />
-    <script src="./script.js"></script>
+    <base href="/" />
   </head>
   <body>
     <header>
-      <div id="header_top">
+      <div id="logotype">
         <img
-          src="./images/rust.svg"
+          src="/common/images/rust.svg"
           alt="logo"
         />
         <h1>Rust Developers JP</h1>
@@ -33,29 +29,33 @@
       <div>
         <nav>
           <ul>
-            <li><a href="./about/index.html">About</a></li>
-            <li><a href="./news/index.html">News</a></li>
-            <li><a href="./guide/index.html">Guide</a></li>
-            <li><a href="./faq/index.html">F&Q</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/news/">News</a></li>
+            <li><a href="/guide/">Guide</a></li>
+            <li><a href="/faq/">F&Q</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <div class="bg_red">
-      <section id="top">
+    <main>
+      <section id="hero">
         <div class="top_sentenses">
           <h1><span class="rust_gradation">Rust</span><br />Developers JP</h1>
-          <a href="https://discord.com/invite/KDCDNtxzB9">参加する</a>
+          <a
+            href="https://discord.com/invite/KDCDNtxzB9"
+            target="_blank"
+            >参加する</a
+          >
         </div>
         <div class="top_logos">
           <img
-            src="./images/rust_out.svg"
+            src="/common/images/rust_out.svg"
             alt="rust logo"
             class="top_img_rotate"
           />
           <img
-            src="./images/rust_in.svg"
+            src="/common/images/rust_in.svg"
             alt="rust logo"
             class="top_img_scale"
           />
@@ -65,45 +65,49 @@
       <section id="news">
         <h2>お知らせ</h2>
         <div id="news_box">
-          <h3>お知らせを取得しています。。。</h3>
+          <span>Now Loading...</span>
         </div>
-        <a href="./news/index.html">もっと見る</a>
+        <a href="/news/">もっと見る</a>
       </section>
 
       <section id="about">
         <h2>Rust Developers JPとは?</h2>
-        <img
-          src="./images/rust_kani.gif"
-          alt="kanisan"
-        />
+        <span>Rustで繋がる、日本語で深まる。</span>
         <p>
-          Rust Developers
-          JPは、Rustを日本語で学びたい人・語りたい人のためのDiscordコミュニティです。<br />
-          日本には既に rust-jp
-          という大きなRustコミュニティがありますが、Discordで活動する場がなかったことをきっかけにKaiTomotakeによって設立されました。<br />
-          DiscordはUIが洗練され、Bot機能や高品質の通話など、開発者同士の交流に向いた環境が揃っています。<br />
-          特にプログラミングユーザーが多いことから、Rust
-          の学習・議論・開発を行う場として最適だと判断しています。<br />
-          <!--
-当コミュニティでは次のような活動を目的としています：
-
-日本語で Rust の知見を共有する
-
-OSS 参加や新しいツール／クレート開発のきっかけを作る
-
-Rust の学習者・開発者が集まりやすい環境を整える
-
-初心者にも安心な交流の場を維持する
-
-Rust 初心者から経験者まで、誰でも参加できます。
-Rust をよく知らなくても、他言語の知見共有を歓迎しています。
-プロジェクト紹介は専用チャンネル（crates / links）で行えます。
-
-このサーバーは Rust 公式組織とは提携していませんが、
-Rust Code of Conduct と Discord の規約を遵守した、健全で協力的なコミュニティ運営を目指しています。
-                -->
+          Rustを日本語で学び、語り合いたい。<wbr />そんなあなたのための<wbr />Discordコミュニティです。<br />
+          既存のrust-jpコミュニティに加え、<wbr />Discordならではの快適な環境で<wbr />Rust開発者同士が繋がれる場所を作りました。<br />
+          洗練されたUI、便利なBot機能、高品質な通話。<wbr />学習も、議論も、開発も、<wbr />すべてがここで完結します。<br />
+          プログラミングが好きな仲間と一緒に、<wbr />Rustの世界を深めていきませんか?<br />
         </p>
       </section>
-    </div>
+    </main>
+    <footer>
+      <div class="rows">
+        <div id="footer_links">
+          <a href="/about/">About</a>
+          <a href="/news/">News</a>
+          <a href="/guide/">Guide</a>
+          <a href="/faq/">F&Q</a>
+        </div>
+        <div>
+          <a
+            href="https://discord.com/invite/KDCDNtxzB9"
+            target="_blank"
+          >
+            Discord
+          </a>
+          <a
+            href="https://github.com/TeamKOTOCA/rustjpcomunity-site"
+            target="_blank"
+          >
+            GitHub
+          </a>
+        </div>
+      </div>
+      <p>
+        © 2025 Rust Developers JP<br />
+        This site is not affiliated with the Mozilla Foundation.
+      </p>
+    </footer>
   </body>
 </html>
