@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "mplus";
+  src: url("/fonts/MPLUS1p-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --color-primary: #f74c00;
+  --color-accent: #00abf7;
+  --color-base: #ffffff;
+  --text-base: #333333;
+}
+
+.bg_red {
+  background: linear-gradient(135deg, #ffffffe6, #f3b4ab);
+  margin: 0;
+  padding: 50px;
+}
+
+html,
+body {
+  font-family: "mplus", sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+header {
+  z-index: 10;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 15px;
+  box-sizing: border-box;
+}
+
+#logotype {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  color: var(--text-base);
+  text-decoration: none;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#logotype img {
+  height: 4rem;
+  width: 4rem;
+  margin-right: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-base);
+  font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+  color: var(--color-accent);
+  text-decoration: dashed underline;
+}
