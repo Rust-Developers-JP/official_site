@@ -1,16 +1,25 @@
 # トップページ
+
 - Discord招待[（私のプロフにあります）](https://discord.com/invite/KDCDNtxzB9)
 - コミュニティ概要
+
 # コミュニティ紹介ページ
+
 - サーバー設立の経緯
 - なぜDiscordなのか
 - 活動目的
 - 管理チーム紹介
+
 # ガイドライン
+
 <#1447147141058400328> をそのまま貼る
+
 # お知らせページ
+
 改変が楽なようにしてください
+
 # FAQ
+
 後述
 
 ・設立の経緯
@@ -27,7 +36,6 @@ Discordは洗練されたUI、Botも含めた多くの機能、特に高品質�
 Rustをよく知らないのですが大丈夫でしょうか？ -> 大丈夫です。ほかの言語のユーザーでも、プログラミングの知見を共有してくださる方は歓迎します。
 プロジェクト紹介はしていい？ -> 問題ありません。cratesチャンネルもしくはlinksチャンネルにて紹介・宣伝可能です。
 
-
 # The Rust Programming Language Japan Community - サーバールール
 
 ようこそ、The Rust Programming Language Japan Community へ！  
@@ -40,7 +48,8 @@ Rustをよく知らないのですが大丈夫でしょうか？ -> 大丈夫で
 
 ---
 
-## 1️⃣ Rust の行動規範に従う  
+## 1️⃣ Rust の行動規範に従う
+
 Rust Code of Conduct に準拠します。  
 https://www.rust-lang.org/policies/code-of-conduct
 
@@ -48,41 +57,44 @@ https://www.rust-lang.org/policies/code-of-conduct
 
 ---
 
-## 2️⃣ お互いを尊重する  
+## 2️⃣ お互いを尊重する
+
 このサーバーは「誰もが安心して話せる場」であることを大切にします。  
 以下の行為は禁止されます（例を含みますが、これに限りません）：
 
-- 侮辱・煽り・トロール・ハラスメント  
-- 特定技術・言語への悪意ある誹謗  
-- 過度な押しつけや高圧的な言動  
-- 不毛な議論を長引かせる行為  
+- 侮辱・煽り・トロール・ハラスメント
+- 特定技術・言語への悪意ある誹謗
+- 過度な押しつけや高圧的な言動
+- 不毛な議論を長引かせる行為
 - 過剰に挑発的な発言や baiting
 
 調子が悪い時は、無理せず休みましょう。
 
 ---
 
-## 3️⃣ 不適切なコンテンツは禁止  
+## 3️⃣ 不適切なコンテンツは禁止
+
 Discord Community Guidelines に従います。
 
 次の内容は禁止です：
 
-- 差別的・憎悪表現  
-- 暴力的・成人向け・性的内容  
-- 過度な罵倒や不快な発言  
-- スパム（大量投稿・大量画像・過度なミーム）  
-- 過剰にアテンションを引く行為  
-- 不適切なユーザー名・アイコン・ステータス  
+- 差別的・憎悪表現
+- 暴力的・成人向け・性的内容
+- 過度な罵倒や不快な発言
+- スパム（大量投稿・大量画像・過度なミーム）
+- 過剰にアテンションを引く行為
+- 不適切なユーザー名・アイコン・ステータス
 - 不正行為、ハッキング、ゲームチートの共有
 
 ---
 
-## 4️⃣ 宣伝・勧誘・営利目的は禁止  
+## 4️⃣ 宣伝・勧誘・営利目的は禁止
+
 以下は禁止します：
 
-- サーバー/サービスの広告  
-- 求人の投稿  
-- 有償依頼の募集/提供  
+- サーバー/サービスの広告
+- 求人の投稿
+- 有償依頼の募集/提供
 - 無関係なリンクのばらまき
 
 ただし、会話の文脈上必要なリンクであれば可とします。  
@@ -90,52 +102,55 @@ Discord Community Guidelines に従います。
 
 ---
 
-## 5️⃣ Rust（ゲーム）の話題は禁止  
+## 5️⃣ Rust（ゲーム）の話題は禁止
+
 このサーバーは **プログラミング言語 Rust** のコミュニティです。  
 ゲーム「Rust」を目的とした参加者は、状況に応じてキックまたはBANされることがあります。
 
 ---
 
-## 6️⃣ モデレーターの指示に従う  
+## 6️⃣ モデレーターの指示に従う
+
 モデレーターはサーバーを安全に保つために存在します。
 
-- 問題があれば <@&1447146779706523759> を呼んでください  
-- モデレーターの対応時は、終了指示があるまで横入りしないでください  
-- モデレーターのなりすましは禁止  
+- 問題があれば <@&1447146779706523759> を呼んでください
+- モデレーターの対応時は、終了指示があるまで横入りしないでください
+- モデレーターのなりすましは禁止
 - 注意を受けたにもかかわらず従わない場合、より厳しい措置が行われます
 
 ---
 
-## 7️⃣ Discord 利用規約とコミュニティガイドラインを遵守  
+## 7️⃣ Discord 利用規約とコミュニティガイドラインを遵守
+
 すべての参加者は、Discordの以下の規約を必ず守ってください：
 
-- Discord 利用規約（Terms of Service）  
-- Discord Community Guidelines  
+- Discord 利用規約（Terms of Service）
+- Discord Community Guidelines
 
 違反は、本サーバーでの処罰に加えて Discord 全体からの制裁対象にもなります。
 
 ---
 
-## 8️⃣ 健全で協力的な Rust コミュニティを目指しましょう  
+## 8️⃣ 健全で協力的な Rust コミュニティを目指しましょう
+
 質問・相談・議論・雑談などは歓迎です。  
 初心者にも優しく、学び合い、助け合う場を作りましょう。
 
 ---
 
-## ルール違反への対応  
+## ルール違反への対応
+
 違反内容の重大性に応じて、以下の措置が行われる場合があります：
 
-- 注意  
-- 一時的なミュート  
-- 一時的な参加停止  
-- キック  
-- BAN  
+- 注意
+- 一時的なミュート
+- 一時的な参加停止
+- キック
+- BAN
 
 ---
 
 このコミュニティが、Rust を学び、楽しみ、成長できる場所になることを願っています！
-
-
 
 了解。**出力専用ブランチ `gh-pages` を使う方式**に切り替えるなら、
 構成・フロー・GitHub Actions の全部を “その方式に最適化した形” でまとめるよ。
@@ -191,10 +206,10 @@ gh-pages（出力専用ブランチ）
 
 # ✔️ GitHub Pages 側の設定
 
-GitHub → リポジトリ → *Settings* → *Pages*
+GitHub → リポジトリ → _Settings_ → _Pages_
 
-* **Source：Deploy from branch**
-* **Branch：gh-pages / root**
+- **Source：Deploy from branch**
+- **Branch：gh-pages / root**
 
 これでOK。
 
@@ -209,7 +224,7 @@ name: Build & Deploy
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
@@ -217,16 +232,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      
+
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
 
       - run: npm ci
-      
+
       # /scripts/build.js で dist/ を生成する想定
       - run: node scripts/build.js
-      
+
       # dist を gh-pages に強制 push
       - name: Deploy to gh-pages
         run: |
@@ -241,9 +256,9 @@ jobs:
 
 ポイントの根拠：
 
-* gh-pages は生成物専用なので **force push が安全**
-* Actions 内で **自前の mini-repo** を作って push する方式が一番安定
-* “dist/ をそのまま push” するので GitHub Pages と完璧に連携できる
+- gh-pages は生成物専用なので **force push が安全**
+- Actions 内で **自前の mini-repo** を作って push する方式が一番安定
+- “dist/ をそのまま push” するので GitHub Pages と完璧に連携できる
 
 ---
 
@@ -273,16 +288,16 @@ gh-pages
 
 # ✔️ まとめ
 
-* “gh-pages に生成物を push” 方式は **GitHub Pages で昔から最も安定**
-* main は素材とコードだけ → **クリーンで保守性高い**
-* GitHub Actions で dist を push → **完全自動化**
+- “gh-pages に生成物を push” 方式は **GitHub Pages で昔から最も安定**
+- main は素材とコードだけ → **クリーンで保守性高い**
+- GitHub Actions で dist を push → **完全自動化**
 
 ---
 
 必要なら、次のどれも作れる：
 
-* `/scripts/build.js` の最小実装（Markdown → HTML + layout適用）
-* `generateIndex.js`（記事一覧HTML自動生成）
-* Markdown パーサのおすすめ（remark / marked / custom）
+- `/scripts/build.js` の最小実装（Markdown → HTML + layout適用）
+- `generateIndex.js`（記事一覧HTML自動生成）
+- Markdown パーサのおすすめ（remark / marked / custom）
 
 どれ作る？
