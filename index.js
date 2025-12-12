@@ -106,9 +106,11 @@ articles.forEach(article => {
   const listHtml = articles.map(a => `
     <hr>
     <article class="news-item">
-      <h2><a href="./article/${a.slug}/">${a.title}</a></h2>
-      <p class="date">${a.date}</p>
-      <p class="desc">${a.description}</p>
+      <a href="./article/${a.slug}/">
+        <h2>${a.title}</h2>
+        <p class="date">${a.date}</p>
+        <p class="desc">${a.description}</p>
+      </a>
     </article>
   `.trim()).join("\n");
 
@@ -118,5 +120,32 @@ articles.forEach(article => {
   fs.mkdirpSync(outDir);
   fs.writeFileSync(path.join(outDir, "index.html"), final, "utf8");
 }
+// ============================================================================
+// 5, トップページも改変
+// ============================================================================
+{
+  const template = fs.readFileSync(path.join(PAGE_DIR, "index.html"), "utf8");
+
+  const listHtml = articles
+    .slice(0, 3)
+    .map(a => `
+      <hr>
+      <article class="news-item">
+        <a href="./news/article/${a.slug}/">
+          <h2>${a.title}</h2>
+          <p class="date">${a.date}</p>
+          <p class="desc">${a.description}</p>
+        </a>
+      </article>
+    `.trim())
+    .join("\n");
+
+  const final = template.replace("{{articles}}", listHtml);
+
+  const outDir = OUT_DIR;
+  fs.mkdirpSync(outDir);
+  fs.writeFileSync(path.join(outDir, "index.html"), final, "utf8");
+}
+
 
 console.log("Build completed.");

@@ -9,7 +9,7 @@
 .bg_red{
     background: linear-gradient(135deg, #ffffffe6,#f3b4ab);
     margin: 0;
-    padding: 50px;
+    padding: 50px 50px 20px 50px;
 }
 
 html,body {
@@ -53,152 +53,11 @@ header a{
 header a:hover{
     background-color: #ddddddaa;
 }
-
-#top {
-    height: 95vh;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    position: relative;
+footer button{
+    border: none;
+    background: none;
 }
-
-.top_sentenses{
-    position: absolute;
-    bottom: 20vh;
-    left: 0;
-    padding: 20px 10px 20px 30px;
-    background-color: #ffffffaa;
-    z-index: 9;
-}
-#top h1{
-    font-size: 60px;
-    word-break: keep-all;
-    margin: 0 0 20px 0;
-}
-#top a{
-    display: block;
-    width: calc(100% - 60px);
+footer p{
     text-align: center;
-    text-decoration: none;
-    padding: 20px;
     margin: 0;
-    color: #fff;
-    background-color: #ce412b;
-    box-shadow: #f3b4ab 7px 5px 0;
-    font-size: 20px;
-}
-#top a:hover{
-    background-color: #f3644e;
-    box-shadow: #f3b4ab 5px 3px 0;
-}
-.rust_gradation {
-    background: linear-gradient(90deg, #c7240b, #f3644e, #ce412b);
-    background-size: 300%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-
-    animation: rustMove 6s ease-in-out infinite alternate;
-}
-
-@keyframes rustMove {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
-}
-
-.top_logos{
-    position: absolute;
-    right: -40vh;
-    display: grid;
-    place-items: center;
-}
-#top img {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    width: 90vh;
-    height: 90vh;
-}
-
-.top_img_rotate {
-    animation: rotate_logo 10s ease-in-out infinite;
-    transform-origin: center;
-}
-
-@keyframes rotate_logo {
-    0% {
-        transform: rotate(0deg);
-    }
-    50% {
-        transform: rotate(360deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-.top_img_scale{
-    animation: scale_logo 10s linear infinite;
-    transform-origin: center;
-}
-
-@keyframes scale_logo {
-    0% {
-        transform: scale(1);
-    }
-    5% {
-        transform: scale(0.9);
-    }
-    45% {
-        transform:scale(0.9);
-    }
-    50% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-#news a{
-    text-align: center;
-    display: block;
-    text-decoration: none;
-    color: #c7240b;
-    padding: 10px 0;
-}
-#news a:hover{
-    background-color: #aaaaaa55;
-}
-#about{
-    width: calc(100% - 20px);
-    margin: 10px;
-}
-#about img{
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-
-@media (max-width: 500px) {
-#top h1{
-    font-size: 50px;
-}
-}
-
-@media (max-width: 450px) {
-#top h1{
-    font-size: 40px;
-}
-}
-
-@media (max-width: 370px) {
-
-#top h1{
-    font-size: 30px;
-}
 }
