@@ -1,6 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const HeaderLinks = [
+  { href: "/", label: "ホーム" },
+  { href: "/about", label: "私たちについて" },
+  { href: "/news", label: "お知らせ" },
+  { href: "/contact", label: "お問い合わせ" },
+];
+
 export default function Header() {
   return (
     <header className="p-4 flex flex-row justify-between items-center">
@@ -15,38 +22,16 @@ export default function Header() {
       </h1>
       <nav>
         <ul className="flex flex-row gap-4">
-          <li>
-            <Link
-              href="/"
-              className="hover:underline"
-            >
-              ホーム
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/about"
-              className="hover:underline"
-            >
-              私たちについて
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/news"
-              className="hover:underline"
-            >
-              お知らせ
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/contact"
-              className="hover:underline"
-            >
-              お問い合わせ
-            </Link>
-          </li>
+          {HeaderLinks.map((link) => (
+            <li key={link.href}>
+              <Link
+                href={link.href}
+                className="hover:underline"
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
