@@ -56,8 +56,30 @@ header a:hover{
 footer button{
     border: none;
     background: none;
+    text-decoration-line: underline;
 }
 footer p{
     text-align: center;
     margin: 0;
+}
+footer button:hover{
+    color: #000000aa;
+}
+
+#footer_dlg{
+    border: none;
+    padding: 20px 10px 20px 30px;
+    background-color: #ffffffcc;
+}
+#footer_dlg button{
+    display: block;
+    background-color: #c7240b;
+    color: #fff;
+    margin-top: 10px;
+    width: calc(100% - 20px);
+    padding: 10px 20px;
+    text-decoration: none;
+}
+#footer_dlg button:hover{
+    background-color: #d45d4b;
 }

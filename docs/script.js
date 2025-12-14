@@ -63,35 +63,69 @@ document.addEventListener("DOMContentLoaded", async () => {
 //
 
 document.addEventListener('DOMContentLoaded', () => {
-    // メンテナンスオーバーレイを作る関数
+    // すでに「表示しない」が保存されていたら何もしない
+    if (localStorage.getItem('hideMaintenanceOverlay') === 'true') {
+        return;
+    }
+
     const overlay = document.createElement('div');
     overlay.id = 'maintenanceOverlay';
-    overlay.textContent = '現在改装中です';
 
-    // CSSを直接JSで設定
+    const message = document.createElement('div');
+    message.textContent = '現在改装中です';
+
+    const buttons = document.createElement('div');
+
+    const closeBtn = document.createElement('button');
+    closeBtn.textContent = '閉じる';
+
+    const neverBtn = document.createElement('button');
+    neverBtn.textContent = '二度と表示しない';
+
+    overlay.appendChild(message);
+    overlay.appendChild(buttons);
+    buttons.appendChild(closeBtn);
+    buttons.appendChild(neverBtn);
+
     Object.assign(overlay.style, {
         position: 'fixed',
-        top: '0',
-        left: '0',
-        width: '100%',
-        height: '100%',
+        inset: '0',
         backgroundColor: 'rgba(0,0,0,0.85)',
         color: '#fff',
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: '3rem',
-        textAlign: 'center',
         zIndex: '9999',
         padding: '1rem',
-        boxSizing: 'border-box'
+        boxSizing: 'border-box',
+        gap: '1.5rem',
+        textAlign: 'center'
     });
 
-    // bodyに追加
+    Object.assign(buttons.style, {
+        display: 'flex',
+        gap: '1rem'
+    });
+
+    Object.assign(closeBtn.style, neverBtn.style = {
+        fontSize: '1rem',
+        padding: '0.6rem 1.2rem',
+        cursor: 'pointer'
+    });
+
     document.body.appendChild(overlay);
 
-    // クリックで消す
-    overlay.addEventListener('click', () => {
+    // 閉じる（次回は表示される）
+    closeBtn.onclick = () => {
         overlay.remove();
-    });
+    };
+
+    // 二度と表示しない
+    neverBtn.onclick = () => {
+        localStorage.setItem('hideMaintenanceOverlay', 'true');
+        overlay.remove();
+    };
 });
+

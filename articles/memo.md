@@ -1,3 +1,10 @@
+---
+title: "コンテキスト"
+date: "2025-12-12"
+description: "KaiTomotakeからの指示を確認するためにおいてるだけです・"
+tags: ["Note"]
+---
+
 # トップページ
 - Discord招待[（私のプロフにあります）](https://discord.com/invite/KDCDNtxzB9)
 - コミュニティ概要

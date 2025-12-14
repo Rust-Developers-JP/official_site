@@ -17,6 +17,11 @@ const ARTICLE_TEMPLATE = path.join(PAGE_DIR, "news", "article_template.html");
 fs.removeSync(OUT_DIR);
 fs.mkdirpSync(OUT_DIR);
 
+// 細かい設定の入力
+const settings = JSON.parse(
+  fs.readFileSync(path.join(ROOT, "setting.json"), "utf8")
+);
+
 // ============================================================================
 // 1. /pages 配下の “news 以外を全部” コピー
 // ============================================================================
@@ -39,8 +44,40 @@ function copyExceptNews(src, dest) {
     }
   }
 }
+function copyExceptNews(src, dest, settings) {
+  fs.mkdirpSync(dest);
 
-copyExceptNews(PAGE_DIR, OUT_DIR);
+  const entries = fs.readdirSync(src, { withFileTypes: true });
+
+  for (const entry of entries) {
+    const srcPath = path.join(src, entry.name);
+    const destPath = path.join(dest, entry.name);
+
+    // news フォルダはコピーしない（テンプレ用途のため）
+    if (entry.name === "news") continue;
+
+    if (entry.isDirectory()) {
+      copyExceptNews(srcPath, destPath, settings);
+    } else {
+      if (entry.name.endsWith(".html")) {
+        // HTMLなら置換してコピー
+        let content = fs.readFileSync(srcPath, "utf8");
+
+        // settings.json に合わせて {{key}} を置換
+        for (const [key, value] of Object.entries(settings)) {
+          content = content.replaceAll(`{{${key}}}`, value);
+        }
+
+        fs.writeFileSync(destPath, content, "utf8");
+      } else {
+        // HTML以外は通常コピー
+        fs.copySync(srcPath, destPath);
+      }
+    }
+  }
+}
+
+copyExceptNews(PAGE_DIR, OUT_DIR, settings);
 
 // ============================================================================
 // 2. 記事（/articles/*.md）読み込み
@@ -107,7 +144,7 @@ articles.forEach(article => {
     <hr>
     <article class="news-item">
       <a href="./article/${a.slug}/">
-        <h2>${a.title}</h2>
+        <h3>${a.title}</h3>
         <p class="date">${a.date}</p>
         <p class="desc">${a.description}</p>
       </a>
@@ -124,7 +161,7 @@ articles.forEach(article => {
 // 5, トップページも改変
 // ============================================================================
 {
-  const template = fs.readFileSync(path.join(PAGE_DIR, "index.html"), "utf8");
+  const template = fs.readFileSync(path.join(OUT_DIR, "index.html"), "utf8");
 
   const listHtml = articles
     .slice(0, 3)
@@ -132,7 +169,7 @@ articles.forEach(article => {
       <hr>
       <article class="news-item">
         <a href="./news/article/${a.slug}/">
-          <h2>${a.title}</h2>
+          <h3>${a.title}</h3>
           <p class="date">${a.date}</p>
           <p class="desc">${a.description}</p>
         </a>

@@ -30,12 +30,23 @@
         <section id="top">
             <div class="top_sentenses">
                 <h1><span class="rust_gradation">Rust</span><br>Developers JP</h1>
-                <a href="https://discord.com/invite/KDCDNtxzB9">参加する</a>
+                <a href="{{discord_url}}">参加する</a>
             </div>
             <div class="top_logos">
                 <img src="./images/rust_out.svg" alt="rust logo" class="top_img_rotate">
                 <img src="./images/rust_in.svg" alt="rust logo" class="top_img_scale">
             </div>
+        </section>
+
+        <section id="about">
+            <h2>Rust Developers JPとは?</h2>
+            <p>
+                Rust Developers JPは、Rustを日本語で学びたい人・語りたい人のためのDiscordコミュニティです。<br>
+                日本には既に rust-jp という大きなRustコミュニティがありますが、Discordで活動する場がなかったことをきっかけにKaiTomotakeによって設立されました。<br>
+                DiscordはUIが洗練され、Bot機能や高品質の通話など、開発者同士の交流に向いた環境が揃っています。<br>
+                特にプログラミングユーザーが多いことから、Rust の学習・議論・開発を行う場として最適だと判断しています。<br>
+            </p>
+            <a class="about_more" href="./about/index.html">もっと見る</a>
         </section>
 
         <section id="news">
@@ -46,17 +57,10 @@
             <a class="news_more" href="./news/index.html">もっと見る</a>
         </section>
 
-        <section id="about">
-            <h2>Rust Developers JPとは?</h2>
-            <img src="./images/rust_kani.gif" alt="kanisan">
-            <p>
-                Rust Developers JPは、Rustを日本語で学びたい人・語りたい人のためのDiscordコミュニティです。<br>
-                日本には既に rust-jp という大きなRustコミュニティがありますが、Discordで活動する場がなかったことをきっかけにKaiTomotakeによって設立されました。<br>
-                DiscordはUIが洗練され、Bot機能や高品質の通話など、開発者同士の交流に向いた環境が揃っています。<br>
-                特にプログラミングユーザーが多いことから、Rust の学習・議論・開発を行う場として最適だと判断しています。<br>
-            </p>
-            <a class="about_more" href="./about/index.html">もっと見る</a>
+        <section id="join_us">
+            <a href="{{discord_url}}">参加する</a>
         </section>
+
         <footer>
             <p>&copy;Povo43 and <button id="more_copyright">more</button></p>
             <dialog id="footer_dlg">
@@ -79,7 +83,11 @@
         </footer>
     </div>
     <style>
-        #top {
+h2{
+    font-size: 2em;
+}
+
+#top {
     height: 95vh;
     width: 100%;
     max-width: 800px;
@@ -177,6 +185,9 @@
     5% {
         transform: scale(0.9);
     }
+    30% {
+        transform: scale(0.95);
+    }
     45% {
         transform:scale(0.9);
     }
@@ -186,6 +197,20 @@
     100% {
         transform: scale(1);
     }
+}
+
+#about{
+    width: calc(100% - 20px);
+    margin: 10px;
+    background-image: url(./images/ferris_white.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+}
+#about img{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .news-item h2,.news-item a{
@@ -213,15 +238,22 @@
 .news_more:hover,.about_more:hover{
     background-color: #ffffff55;
 }
-
-#about{
-    width: calc(100% - 20px);
-    margin: 10px;
+#newses hr{
+    margin: auto;
+    width: calc(100% - 10px);
 }
-#about img{
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+
+#join_us a{
+    display: block;
+    width: 90vw;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #c7240b;
+    color: #fff;
+    box-shadow: #f3b4ab 7px 5px 0;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px auto;
 }
 
 

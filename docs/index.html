@@ -38,24 +38,8 @@
             </div>
         </section>
 
-        <section id="news">
-            <h2>お知らせ</h2>
-            <div id="newses">
-                <hr>
-      <article class="news-item">
-        <a href="./news/article/001/">
-          <h2>初投稿</h2>
-          <p class="date">2025-12-12</p>
-          <p class="desc">初めての投稿です。</p>
-        </a>
-      </article>
-            </div>
-            <a class="news_more" href="./news/index.html">もっと見る</a>
-        </section>
-
         <section id="about">
             <h2>Rust Developers JPとは?</h2>
-            <img src="./images/rust_kani.gif" alt="kanisan">
             <p>
                 Rust Developers JPは、Rustを日本語で学びたい人・語りたい人のためのDiscordコミュニティです。<br>
                 日本には既に rust-jp という大きなRustコミュニティがありますが、Discordで活動する場がなかったことをきっかけにKaiTomotakeによって設立されました。<br>
@@ -64,6 +48,34 @@
             </p>
             <a class="about_more" href="./about/index.html">もっと見る</a>
         </section>
+
+        <section id="news">
+            <h2>お知らせ</h2>
+            <div id="newses">
+                <hr>
+      <article class="news-item">
+        <a href="./news/article/001/">
+          <h3>初投稿</h3>
+          <p class="date">2025-12-12</p>
+          <p class="desc">初めての投稿です。</p>
+        </a>
+      </article>
+<hr>
+      <article class="news-item">
+        <a href="./news/article/memo/">
+          <h3>コンテキスト</h3>
+          <p class="date">2025-12-12</p>
+          <p class="desc">KaiTomotakeからの指示を確認するためにおいてるだけです・</p>
+        </a>
+      </article>
+            </div>
+            <a class="news_more" href="./news/index.html">もっと見る</a>
+        </section>
+
+        <section id="join_us">
+            <a href="https://discord.com/invite/KDCDNtxzB9">参加する</a>
+        </section>
+
         <footer>
             <p>&copy;Povo43 and <button id="more_copyright">more</button></p>
             <dialog id="footer_dlg">
@@ -86,7 +98,11 @@
         </footer>
     </div>
     <style>
-        #top {
+h2{
+    font-size: 2em;
+}
+
+#top {
     height: 95vh;
     width: 100%;
     max-width: 800px;
@@ -184,6 +200,9 @@
     5% {
         transform: scale(0.9);
     }
+    30% {
+        transform: scale(0.95);
+    }
     45% {
         transform:scale(0.9);
     }
@@ -193,6 +212,20 @@
     100% {
         transform: scale(1);
     }
+}
+
+#about{
+    width: calc(100% - 20px);
+    margin: 10px;
+    background-image: url(./images/ferris_white.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+}
+#about img{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .news-item h2,.news-item a{
@@ -220,15 +253,22 @@
 .news_more:hover,.about_more:hover{
     background-color: #ffffff55;
 }
-
-#about{
-    width: calc(100% - 20px);
-    margin: 10px;
+#newses hr{
+    margin: auto;
+    width: calc(100% - 10px);
 }
-#about img{
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+
+#join_us a{
+    display: block;
+    width: 90vw;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #c7240b;
+    color: #fff;
+    box-shadow: #f3b4ab 7px 5px 0;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px auto;
 }
 
 
