@@ -110,3 +110,7 @@ h2 {
   margin: auto;
   width: calc(100% - 10px);
 }
+
+.bg_red_gradient {
+  background: linear-gradient(135deg, #ffffffe6, #f3b4ab);
+}
