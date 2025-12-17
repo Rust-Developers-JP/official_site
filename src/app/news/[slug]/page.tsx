@@ -1,7 +1,15 @@
-import { getPostBySlug, Post } from "@/lib/posts";
+import { getPostBySlug, getAllPosts, Post } from "@/lib/posts";
 import { forbidden } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+
+export const dynamic = "force-static";
+export const revalidate = false;
+
+export async function generateStaticParams() {
+  const posts = getAllPosts();
+  return posts.map((p) => ({ slug: p.slug }));
+}
 
 export default async function News({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
