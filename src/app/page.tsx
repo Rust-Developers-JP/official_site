@@ -2,8 +2,11 @@ import SiteSetting from "@/config";
 import Image from "next/image";
 import Link from "next/link";
 import "./page.css";
+import { getRecentPosts, Post } from "@/lib/posts";
 
 export default function Home() {
+  const recentPosts: Post[] = getRecentPosts();
+
   return (
     <main>
       <div className="bg_red">
@@ -78,18 +81,57 @@ export default function Home() {
           className="flex flex-col mx-auto max-w-4xl items-start gap-8 px-4 py-12"
         >
           <h2>お知らせ</h2>
-          <ul className="list-disc list-inside">
-            <li>2024/06/01 - サイトをリニューアルしました！</li>
-            <li>2023/12/15 - 新しいチャンネル「プロジェクト紹介」を追加しました！</li>
-            <li>2023/10/10 - 定期オンラインミートアップを開始しました！</li>
+          <ul className="list-inside w-full">
+            {recentPosts.map((post, index) => (
+              <>
+                <li
+                  key={post.slug}
+                  className="mb-4"
+                >
+                  <Link
+                    href={`/posts/${post.slug}`}
+                    className="text-xl font-semibold rust_gradation"
+                  >
+                    {post.title}
+                  </Link>
+                  <p className="text-sm text-gray-600">
+                    {post.date.toLocaleDateString("ja-JP", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </p>
+                  <p className="mt-2">{post.description}</p>
+                </li>
+                {index < recentPosts.length - 1 && <hr className="w-full border-gray-300 my-4" />}
+              </>
+            ))}
           </ul>
+          <Link
+            href="/posts"
+            className="btn_1 mt-4 w-max"
+          >
+            もっと見る
+          </Link>
         </section>
 
         <section
           id="join_us"
-          className="btn_1"
+          className="flex flex-col mx-auto max-w-4xl items-start gap-8 px-4 py-12"
         >
-          <Link href={SiteSetting.SocialLinks.Discord}>参加する</Link>
+          <h2>さあ、私たちと一緒に Rust を学びましょう!</h2>
+          <p>
+            Rust Developers JP は、初心者から経験豊富な開発者まで、すべてのレベルの Rust
+            プログラマーを歓迎します。質問がある場合や、プロジェクトについて話し合いたい場合、または単に
+            Rust
+            コミュニティの一員になりたい場合は、ぜひ参加してください。私たちはあなたを歓迎し、サポートする準備ができています！
+          </p>
+          <Link
+            href={SiteSetting.SocialLinks.Discord}
+            className="btn_1"
+          >
+            参加する
+          </Link>
         </section>
       </div>
     </main>
